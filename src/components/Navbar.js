@@ -23,10 +23,20 @@ const Navbar = () => {
 
                         <li>
                             <a href='/'>About</a>
+                            <ul className='drop-down'>
+                                <li><a href='/'>Portfolio</a></li>
+                                <li><a href='/'>Teams</a></li>
+                            </ul>
                         </li>
 
                         <li>
                             <a href='/'>Services</a>
+                            <ul className='drop-down'>
+                                <li><a href='/'>Portfolio</a></li>
+                                <li><a href='/'>Teams</a></li>
+                                <li><a href='/'>Portfolio</a></li>
+                                <li><a href='/'>Teams</a></li>
+                            </ul>
                         </li>
 
                         <li>
@@ -61,8 +71,7 @@ const Navbar = () => {
             </nav>
 
             <section className='hero-section'>
-                <p>Welcome to</p>
-                <h1>Rohit Verma</h1>
+                <p>Welcome</p>
             </section>
         </>
     )

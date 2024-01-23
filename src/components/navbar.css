@@ -17,8 +17,6 @@
     list-style: none;
   }
   
-  /* 
-   
   
   /* navbar style start  */
   
@@ -76,7 +74,7 @@
     font-weight: 400;
     text-transform: uppercase;
     background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
   }
   
@@ -86,16 +84,17 @@
   
   .menu-link ul li {
     font-size: 1.8rem;
+    position: relative;
   }
   
   .menu-link ul li a {
     text-transform: capitalize;
-    color: rgba(0, 0, 3, 0.8);
+    /* color: rgba(0, 0, 3, 0.8); */
     transition: 0.5s;
   }
   .menu-link ul li:hover > a {
     transform-origin: left;
-    color: rgba(0, 0, 3, 1);
+    /* color: rgba(0, 0, 3, 1); */
     text-decoration: underline;
     transition: 0.5s;
   }
@@ -119,7 +118,47 @@
   .youtube {
     color: #ff0000;
   }
+
+  .menu-link .drop-down{
+    min-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    padding: 2rem 0;
+    gap:2rem;
+    transform: translate(-50%, 20%);
+    transition: all 0.3s linear;
+    top:3rem;
+    height: auto;
+
+
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .drop-down li{
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .drop-down li a{
+    color: white;
+  }
+
+  .drop-down li a:hover{
+    color: white;
+  }
+
+  .menu-link ul li:hover> .drop-down{
+    visibility: visible;
+    opacity: 1;
+    top:1rem;
+  }
   
+
   /* hero section   */
   
   .hero-section {
@@ -131,15 +170,10 @@
   }
   
   .hero-section p {
-    font-size: 3rem;
+    font-size: 5rem;
     text-transform: capitalize;
   }
   
-  .hero-section h1 {
-    font-size: 5rem;
-    text-transform: uppercase;
-    text-align: center;
-  }
   
   /* responsive css style  */
   @media (max-width: 1080px) {
@@ -161,6 +195,11 @@
 
   /* responsive css style  */
 @media (max-width: 998px) {
+
+  .menu-link .drop-down{
+    display: none;
+  }
+
   .main-nav {
     height: 7rem;
     grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
